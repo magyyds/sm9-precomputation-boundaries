@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "workload_overhead_runs": 16200,
+  "dependent_service_runs": 6480,
+  "independent_service_exact_rechecks": 2160,
+  "new_dependent_service_runs": 4320,
+  "new_saved_service_arrays": 240,
+  "policy_mean_reconciliation": true,
+  "all_overhead_cost_change_identities": true,
+  "no_new_hardware_measurements": true,
+  "source_sha256": "67940d3c2d57dbe27dd50746ea68c0d2464242cfef10a9bedf43344066650392"
+}

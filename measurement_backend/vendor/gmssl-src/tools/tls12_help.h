@@ -1,0 +1,70 @@
+/*
+ *  Copyright 2014-2026 The GmSSL Project. All Rights Reserved.
+ *
+ *  Licensed under the Apache License, Version 2.0 (the License); you may
+ *  not use this file except in compliance with the License.
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ */
+
+"\n"
+"Supported cipher suites:\n"
+"    TLS_ECDHE_SM4_CBC_SM3\n"
+"    TLS_ECDHE_SM4_GCM_SM3\n"
+#if defined(ENABLE_AES) && defined(ENABLE_SHA2) && defined(ENABLE_SECP256R1)
+"    TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256\n"
+"    TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256\n"
+#ifdef ENABLE_AES_CCM
+"    TLS_ECDHE_ECDSA_WITH_AES_128_CCM\n"
+#endif
+#endif
+"\n"
+"\n"
+"Examples\n"
+"\n"
+"    gmssl sm2keygen -pass P@ssw0rd -out sm2_root_ca_key.pem\n"
+"    gmssl certgen -C CN -ST Beijing -L Haidian -O GmSSL -OU Test -CN \"GmSSL SM2 Test Root CA\" \\\n"
+"        -days 3650 -key sm2_root_ca_key.pem -pass P@ssw0rd -out sm2_root_ca_cert.pem \\\n"
+"        -key_usage keyCertSign -key_usage cRLSign -ca\n"
+"\n"
+"    gmssl sm2keygen -pass P@ssw0rd -out sm2_tls_ca_key.pem\n"
+"    gmssl reqgen -C CN -ST Beijing -L Haidian -O GmSSL -OU Test -CN \"GmSSL SM2 TLS CA\" \\\n"
+"        -key sm2_tls_ca_key.pem -pass P@ssw0rd -out sm2_tls_ca_req.pem\n"
+"    gmssl reqsign -in sm2_tls_ca_req.pem -days 1825 -key_usage keyCertSign \\\n"
+"        -key_usage cRLSign -path_len_constraint 0 -cacert sm2_root_ca_cert.pem \\\n"
+"        -key sm2_root_ca_key.pem -pass P@ssw0rd -out sm2_tls_ca_cert.pem -ca\n"
+"\n"
+"    gmssl sm2keygen -pass P@ssw0rd -out sm2_tls_server_key.pem\n"
+"    gmssl reqgen -C CN -ST Beijing -L Haidian -O GmSSL -OU Test -CN \"GmSSL SM2 TLS Server\" \\\n"
+"        -key sm2_tls_server_key.pem -pass P@ssw0rd -out sm2_tls_server_req.pem\n"
+"    gmssl reqsign -in sm2_tls_server_req.pem -days 365 -key_usage digitalSignature \\\n"
+"        -ext_key_usage serverAuth -subject_dns_name localhost -cacert sm2_tls_ca_cert.pem \\\n"
+"        -key sm2_tls_ca_key.pem -pass P@ssw0rd -out sm2_tls_server_cert.pem\n"
+"    cat sm2_tls_server_cert.pem > sm2_tls_server_certs.pem\n"
+"    cat sm2_tls_ca_cert.pem >> sm2_tls_server_certs.pem\n"
+"\n"
+"    gmssl sm2keygen -pass P@ssw0rd -out sm2_tls_client_key.pem\n"
+"    gmssl reqgen -C CN -ST Beijing -L Haidian -O GmSSL -OU Test -CN \"GmSSL SM2 TLS Client\" \\\n"
+"        -key sm2_tls_client_key.pem -pass P@ssw0rd -out sm2_tls_client_req.pem\n"
+"    gmssl reqsign -in sm2_tls_client_req.pem -days 365 -key_usage digitalSignature \\\n"
+"        -ext_key_usage clientAuth -cacert sm2_tls_ca_cert.pem -key sm2_tls_ca_key.pem \\\n"
+"        -pass P@ssw0rd -out sm2_tls_client_cert.pem\n"
+"    cat sm2_tls_client_cert.pem > sm2_tls_client_certs.pem\n"
+"    cat sm2_tls_ca_cert.pem >> sm2_tls_client_certs.pem\n"
+"\n"
+"    printf 'hello tls12\\n' > message.txt\n"
+"\n"
+"    gmssl tls12_server -port 4432 -cert sm2_tls_server_certs.pem -key sm2_tls_server_key.pem -pass P@ssw0rd \\\n"
+"        -cipher_suite TLS_ECDHE_SM4_CBC_SM3 -supported_group sm2p256v1 -sig_alg sm2sig_sm3\n"
+"    gmssl tls12_client -host 127.0.0.1 -port 4432 -server_name localhost -cacert sm2_root_ca_cert.pem \\\n"
+"        -cipher_suite TLS_ECDHE_SM4_CBC_SM3 -supported_group sm2p256v1 -sig_alg sm2sig_sm3 \\\n"
+"        -in message.txt\n"
+"\n"
+"    gmssl tls12_server -port 4438 -cert sm2_tls_server_certs.pem -key sm2_tls_server_key.pem -pass P@ssw0rd \\\n"
+"        -cipher_suite TLS_ECDHE_SM4_GCM_SM3 -supported_group sm2p256v1 -sig_alg sm2sig_sm3 \\\n"
+"        -cacert sm2_root_ca_cert.pem -cert_request\n"
+"    gmssl tls12_client -host 127.0.0.1 -port 4438 -server_name localhost -cacert sm2_root_ca_cert.pem \\\n"
+"        -cipher_suite TLS_ECDHE_SM4_GCM_SM3 -supported_group sm2p256v1 -sig_alg sm2sig_sm3 \\\n"
+"        -cert sm2_tls_client_certs.pem -key sm2_tls_client_key.pem -pass P@ssw0rd \\\n"
+"        -in message.txt\n"
+"\n"

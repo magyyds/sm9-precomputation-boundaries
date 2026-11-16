@@ -1,0 +1,8 @@
+[
+  {
+    "path": "measurement_backend/vendor/gmssl-src/src/skf/skf_dummy.c",
+    "sha256": "9054d918f020a7a2e95cf33aabe5022ba4c0683b392ac99aff1e3a3b695b2780",
+    "upstream_url": "https://raw.githubusercontent.com/guanzhi/GmSSL/24ae482701a7b124826c382fffc55c19f76d475d/src/skf/skf_dummy.c",
+    "reason": "Unmodified public upstream test fixture; not an author credential"
+  }
+]

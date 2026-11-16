@@ -1,0 +1,79 @@
+{
+  "N": 4096,
+  "seeds": [
+    271101,
+    271102,
+    271103,
+    271104,
+    271105,
+    271106,
+    271107,
+    271108,
+    271109,
+    271110,
+    271111,
+    271112,
+    271113,
+    271114,
+    271115,
+    271116,
+    271117,
+    271118,
+    271119,
+    271120,
+    271121,
+    271122,
+    271123,
+    271124,
+    271125,
+    271126,
+    271127,
+    271128,
+    271129,
+    271130
+  ],
+  "families": [
+    "stable8",
+    "pressure64",
+    "short2",
+    "bursts4",
+    "mixed_scan",
+    "shift8"
+  ],
+  "slots": [
+    2,
+    4,
+    8
+  ],
+  "rho": [
+    0.5,
+    0.8,
+    0.95,
+    1.0,
+    1.05
+  ],
+  "methods": [
+    "Q-only",
+    "Immediate",
+    "Second-hit",
+    "Third-hit"
+  ],
+  "deadline_ms": 100.0,
+  "policy_ms": 0.01,
+  "model": "FCFS infinite-buffer finite-horizon verification queue; no radio; all inputs valid; no expiration; no deadline dropping",
+  "time_unit": "simulated milliseconds",
+  "q_ms": 6.1287071625,
+  "delta_ms": 0.3167685833333332,
+  "build_ms": 0.3840324,
+  "calibration_provenance": {
+    "calibration/90001.json": "bd89472996f4351c8d7ded4713463e0cde0fe3611f36586b80a012dd59c309f1",
+    "calibration/90002.json": "a18e3ad73264687e74382298ab32ac2f83dde901dc759e8c9858606a65fa4c16",
+    "calibration/90003.json": "d0b7a0a0299376f2c273a4ef030ee915a0184014c5ebb791469e7088cf54bcf4",
+    "calibration/90004.json": "ae9226a02419c999b42de3143f98da2d2a6c80354260f751d44b4f60d656b803",
+    "calibration/90005.json": "2eae7fc080298dff683b81b5fe023f5570e3c270f119fa5baf03010272d741ae",
+    "calibration/summary.json": "479c2e0a277f869bc2f118a85ea401297c57b370b4d14ad96f6dd2e62241e8d1"
+  },
+  "calibration_note": "Archived 2026-10-22 five-group single-process CPU calibration; fixed parameters here; no new hardware measurement; CI conditional on calibration.",
+  "candidate_history": "Exact saturated per-identity counts persist after table eviction; finite trace dictionary not included in table slots. Not a byte-matched SIAP or TinyLFU experiment.",
+  "trace_order": "Same identity trace and unit-exponential interarrivals across methods, slots, and rho in each seed/family. Cache starts empty each run. First arrival at zero."
+}

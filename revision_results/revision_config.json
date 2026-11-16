@@ -1,0 +1,96 @@
+{
+  "seeds": [
+    271101,
+    271102,
+    271103,
+    271104,
+    271105,
+    271106,
+    271107,
+    271108,
+    271109,
+    271110,
+    271111,
+    271112,
+    271113,
+    271114,
+    271115,
+    271116,
+    271117,
+    271118,
+    271119,
+    271120,
+    271121,
+    271122,
+    271123,
+    271124,
+    271125,
+    271126,
+    271127,
+    271128,
+    271129,
+    271130
+  ],
+  "n_messages": 4096,
+  "methods": [
+    "Q-only",
+    "Immediate",
+    "Second-hit",
+    "Third-hit",
+    "LRU-2",
+    "Window-Frequency"
+  ],
+  "primary_slots": [
+    2,
+    4,
+    8
+  ],
+  "primary_loads": [
+    0.5,
+    0.8,
+    0.95,
+    1,
+    1.05
+  ],
+  "primary_costs_ms": {
+    "q": 6.118815199218751,
+    "delta": 0.3178286054687502,
+    "build": 0.3842044088541667,
+    "policy": {
+      "Q-only": 0.0,
+      "Immediate": 0.0003777366265190972,
+      "Second-hit": 0.0003442487778840242,
+      "Third-hit": 0.00032863780664514614,
+      "LRU-2": 0.0008265905320909289,
+      "Window-Frequency": 0.0005368626624213325
+    }
+  },
+  "frequency_window": 1024,
+  "dynamic_families": {
+    "rotating_hotspots": "8 hot IDs switch cyclically among four disjoint sets every 256 messages; 20% unique scans",
+    "bursty_migration": "same mixed construction, switch every512; within each128 messages,32 gaps scaled0.1 and96 scaled1.3; expected gap scale=1"
+  },
+  "empirical_service": "Independently sample pooled q/table/build operation timings with replacement; share the three per-event arrays across methods; no assertion that q and table were measured as paired calls. Arrivals remain tied to mean q.",
+  "sensitivity_delta_scales": [
+    0.5,
+    1,
+    1.5
+  ],
+  "sensitivity_build_scales": [
+    0.5,
+    1,
+    1.5
+  ],
+  "sensitivity_common_p_ms": [
+    0,
+    0.01,
+    0.05,
+    0.1
+  ],
+  "bootstrap_seed": 811610,
+  "bootstrap_resamples": 10000,
+  "replication_unit": "seed",
+  "ci_scope": "Conditional on measured mean costs or the empirical timing pool. Process-level calibration CIs reported separately.",
+  "metadata": "Optional table capacities equal; metadata excluded and separately counted; not byte-matched cache comparison.",
+  "boundary": "Exact H*delta - NB*B - N*p for cost-independent admission decisions; empirical policy envelope, not an optimal online policy."
+}

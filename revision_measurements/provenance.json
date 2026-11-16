@@ -1,0 +1,15 @@
+{
+  "processes": 12,
+  "crypto_timings": 2304,
+  "source_sha256": {
+    "measure_revision.py": "a2e424f9a838093de4cb83e48ef1c0dac270cab80941f29c90b10e4e51996717",
+    "revision_policies.py": "c3ba8f174edf88e24e1cef9d45606106fe2cfe6b68e0673903fa8470c46c171b"
+  },
+  "native_sha256": "a55df2672815b728554513a9c4800219573d6ddec180e5e3aba3f3028cc00221",
+  "environment": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "affinity": [
+    2
+  ],
+  "scope": "Independent software processes on one host, not independent machines; policy and crypto timings obtained in same WSL environment; no physical vehicle tests."
+}

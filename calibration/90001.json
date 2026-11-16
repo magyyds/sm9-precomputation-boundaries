@@ -1,0 +1,879 @@
+{
+  "means": {
+    "q": 6231993.875,
+    "table": 5883092.9375,
+    "build": 385141.4791666667
+  },
+  "samples": [
+    {
+      "index": 0,
+      "op": "q",
+      "cpu_ns": 6263720,
+      "wall_ns": 6277867
+    },
+    {
+      "index": 0,
+      "op": "table",
+      "cpu_ns": 5941440,
+      "wall_ns": 5954556
+    },
+    {
+      "index": 0,
+      "op": "build",
+      "cpu_ns": 454071,
+      "wall_ns": 455298
+    },
+    {
+      "index": 1,
+      "op": "q",
+      "cpu_ns": 6311839,
+      "wall_ns": 6326693
+    },
+    {
+      "index": 1,
+      "op": "build",
+      "cpu_ns": 370725,
+      "wall_ns": 371466
+    },
+    {
+      "index": 1,
+      "op": "table",
+      "cpu_ns": 5813190,
+      "wall_ns": 5831704
+    },
+    {
+      "index": 2,
+      "op": "q",
+      "cpu_ns": 6062646,
+      "wall_ns": 6075562
+    },
+    {
+      "index": 2,
+      "op": "build",
+      "cpu_ns": 421822,
+      "wall_ns": 422730
+    },
+    {
+      "index": 2,
+      "op": "table",
+      "cpu_ns": 5838059,
+      "wall_ns": 5851726
+    },
+    {
+      "index": 3,
+      "op": "build",
+      "cpu_ns": 412022,
+      "wall_ns": 413146
+    },
+    {
+      "index": 3,
+      "op": "q",
+      "cpu_ns": 6115815,
+      "wall_ns": 6129388
+    },
+    {
+      "index": 3,
+      "op": "table",
+      "cpu_ns": 5666912,
+      "wall_ns": 5678883
+    },
+    {
+      "index": 4,
+      "op": "build",
+      "cpu_ns": 363829,
+      "wall_ns": 364558
+    },
+    {
+      "index": 4,
+      "op": "table",
+      "cpu_ns": 5749890,
+      "wall_ns": 5764064
+    },
+    {
+      "index": 4,
+      "op": "q",
+      "cpu_ns": 6062342,
+      "wall_ns": 6074991
+    },
+    {
+      "index": 5,
+      "op": "q",
+      "cpu_ns": 5987204,
+      "wall_ns": 5999814
+    },
+    {
+      "index": 5,
+      "op": "table",
+      "cpu_ns": 6024546,
+      "wall_ns": 6039384
+    },
+    {
+      "index": 5,
+      "op": "build",
+      "cpu_ns": 384618,
+      "wall_ns": 385404
+    },
+    {
+      "index": 6,
+      "op": "build",
+      "cpu_ns": 354029,
+      "wall_ns": 354814
+    },
+    {
+      "index": 6,
+      "op": "table",
+      "cpu_ns": 5713768,
+      "wall_ns": 5725606
+    },
+    {
+      "index": 6,
+      "op": "q",
+      "cpu_ns": 5935023,
+      "wall_ns": 5947519
+    },
+    {
+      "index": 7,
+      "op": "table",
+      "cpu_ns": 5834909,
+      "wall_ns": 5847070
+    },
+    {
+      "index": 7,
+      "op": "q",
+      "cpu_ns": 6186428,
+      "wall_ns": 6199741
+    },
+    {
+      "index": 7,
+      "op": "build",
+      "cpu_ns": 378333,
+      "wall_ns": 379129
+    },
+    {
+      "index": 8,
+      "op": "q",
+      "cpu_ns": 6566868,
+      "wall_ns": 6582903
+    },
+    {
+      "index": 8,
+      "op": "table",
+      "cpu_ns": 7828714,
+      "wall_ns": 7845987
+    },
+    {
+      "index": 8,
+      "op": "build",
+      "cpu_ns": 398339,
+      "wall_ns": 399220
+    },
+    {
+      "index": 9,
+      "op": "q",
+      "cpu_ns": 6347831,
+      "wall_ns": 6362098
+    },
+    {
+      "index": 9,
+      "op": "table",
+      "cpu_ns": 5954414,
+      "wall_ns": 5967049
+    },
+    {
+      "index": 9,
+      "op": "build",
+      "cpu_ns": 387168,
+      "wall_ns": 387967
+    },
+    {
+      "index": 10,
+      "op": "table",
+      "cpu_ns": 6216337,
+      "wall_ns": 6231366
+    },
+    {
+      "index": 10,
+      "op": "q",
+      "cpu_ns": 6032026,
+      "wall_ns": 6044501
+    },
+    {
+      "index": 10,
+      "op": "build",
+      "cpu_ns": 378993,
+      "wall_ns": 379847
+    },
+    {
+      "index": 11,
+      "op": "table",
+      "cpu_ns": 5846318,
+      "wall_ns": 5858653
+    },
+    {
+      "index": 11,
+      "op": "build",
+      "cpu_ns": 374322,
+      "wall_ns": 375027
+    },
+    {
+      "index": 11,
+      "op": "q",
+      "cpu_ns": 6417173,
+      "wall_ns": 6431778
+    },
+    {
+      "index": 12,
+      "op": "table",
+      "cpu_ns": 5599155,
+      "wall_ns": 5610760
+    },
+    {
+      "index": 12,
+      "op": "build",
+      "cpu_ns": 375479,
+      "wall_ns": 376248
+    },
+    {
+      "index": 12,
+      "op": "q",
+      "cpu_ns": 6167045,
+      "wall_ns": 6181177
+    },
+    {
+      "index": 13,
+      "op": "table",
+      "cpu_ns": 5952309,
+      "wall_ns": 5966472
+    },
+    {
+      "index": 13,
+      "op": "q",
+      "cpu_ns": 6295346,
+      "wall_ns": 6309126
+    },
+    {
+      "index": 13,
+      "op": "build",
+      "cpu_ns": 398838,
+      "wall_ns": 399688
+    },
+    {
+      "index": 14,
+      "op": "build",
+      "cpu_ns": 368031,
+      "wall_ns": 368763
+    },
+    {
+      "index": 14,
+      "op": "q",
+      "cpu_ns": 6256336,
+      "wall_ns": 6269915
+    },
+    {
+      "index": 14,
+      "op": "table",
+      "cpu_ns": 5874364,
+      "wall_ns": 5886713
+    },
+    {
+      "index": 15,
+      "op": "build",
+      "cpu_ns": 378918,
+      "wall_ns": 379699
+    },
+    {
+      "index": 15,
+      "op": "q",
+      "cpu_ns": 6221533,
+      "wall_ns": 6235509
+    },
+    {
+      "index": 15,
+      "op": "table",
+      "cpu_ns": 5968068,
+      "wall_ns": 5980570
+    },
+    {
+      "index": 16,
+      "op": "build",
+      "cpu_ns": 381393,
+      "wall_ns": 382161
+    },
+    {
+      "index": 16,
+      "op": "q",
+      "cpu_ns": 6213017,
+      "wall_ns": 6226023
+    },
+    {
+      "index": 16,
+      "op": "table",
+      "cpu_ns": 5960641,
+      "wall_ns": 5974342
+    },
+    {
+      "index": 17,
+      "op": "build",
+      "cpu_ns": 437852,
+      "wall_ns": 438854
+    },
+    {
+      "index": 17,
+      "op": "table",
+      "cpu_ns": 6223666,
+      "wall_ns": 6239320
+    },
+    {
+      "index": 17,
+      "op": "q",
+      "cpu_ns": 6602402,
+      "wall_ns": 6619082
+    },
+    {
+      "index": 18,
+      "op": "q",
+      "cpu_ns": 6233081,
+      "wall_ns": 6245916
+    },
+    {
+      "index": 18,
+      "op": "build",
+      "cpu_ns": 398089,
+      "wall_ns": 398965
+    },
+    {
+      "index": 18,
+      "op": "table",
+      "cpu_ns": 5918546,
+      "wall_ns": 5932812
+    },
+    {
+      "index": 19,
+      "op": "build",
+      "cpu_ns": 384482,
+      "wall_ns": 385257
+    },
+    {
+      "index": 19,
+      "op": "table",
+      "cpu_ns": 5864187,
+      "wall_ns": 5876407
+    },
+    {
+      "index": 19,
+      "op": "q",
+      "cpu_ns": 6074897,
+      "wall_ns": 6087525
+    },
+    {
+      "index": 20,
+      "op": "q",
+      "cpu_ns": 6914734,
+      "wall_ns": 6931621
+    },
+    {
+      "index": 20,
+      "op": "table",
+      "cpu_ns": 6024354,
+      "wall_ns": 6038283
+    },
+    {
+      "index": 20,
+      "op": "build",
+      "cpu_ns": 414712,
+      "wall_ns": 415593
+    },
+    {
+      "index": 21,
+      "op": "q",
+      "cpu_ns": 6230610,
+      "wall_ns": 6245305
+    },
+    {
+      "index": 21,
+      "op": "build",
+      "cpu_ns": 390101,
+      "wall_ns": 390902
+    },
+    {
+      "index": 21,
+      "op": "table",
+      "cpu_ns": 5880528,
+      "wall_ns": 5892773
+    },
+    {
+      "index": 22,
+      "op": "build",
+      "cpu_ns": 430536,
+      "wall_ns": 431813
+    },
+    {
+      "index": 22,
+      "op": "table",
+      "cpu_ns": 6028675,
+      "wall_ns": 6042250
+    },
+    {
+      "index": 22,
+      "op": "q",
+      "cpu_ns": 8308112,
+      "wall_ns": 8326747
+    },
+    {
+      "index": 23,
+      "op": "build",
+      "cpu_ns": 392488,
+      "wall_ns": 393264
+    },
+    {
+      "index": 23,
+      "op": "table",
+      "cpu_ns": 6001336,
+      "wall_ns": 6015512
+    },
+    {
+      "index": 23,
+      "op": "q",
+      "cpu_ns": 6223452,
+      "wall_ns": 6237275
+    },
+    {
+      "index": 24,
+      "op": "q",
+      "cpu_ns": 6206632,
+      "wall_ns": 6219806
+    },
+    {
+      "index": 24,
+      "op": "build",
+      "cpu_ns": 395576,
+      "wall_ns": 396407
+    },
+    {
+      "index": 24,
+      "op": "table",
+      "cpu_ns": 6046667,
+      "wall_ns": 6061049
+    },
+    {
+      "index": 25,
+      "op": "table",
+      "cpu_ns": 5948145,
+      "wall_ns": 5960706
+    },
+    {
+      "index": 25,
+      "op": "q",
+      "cpu_ns": 6062158,
+      "wall_ns": 6075042
+    },
+    {
+      "index": 25,
+      "op": "build",
+      "cpu_ns": 363207,
+      "wall_ns": 363962
+    },
+    {
+      "index": 26,
+      "op": "table",
+      "cpu_ns": 5814680,
+      "wall_ns": 5828133
+    },
+    {
+      "index": 26,
+      "op": "build",
+      "cpu_ns": 362859,
+      "wall_ns": 363625
+    },
+    {
+      "index": 26,
+      "op": "q",
+      "cpu_ns": 5973690,
+      "wall_ns": 5986490
+    },
+    {
+      "index": 27,
+      "op": "q",
+      "cpu_ns": 6036034,
+      "wall_ns": 6051001
+    },
+    {
+      "index": 27,
+      "op": "build",
+      "cpu_ns": 395584,
+      "wall_ns": 396428
+    },
+    {
+      "index": 27,
+      "op": "table",
+      "cpu_ns": 5675145,
+      "wall_ns": 5687303
+    },
+    {
+      "index": 28,
+      "op": "q",
+      "cpu_ns": 5916349,
+      "wall_ns": 5928660
+    },
+    {
+      "index": 28,
+      "op": "build",
+      "cpu_ns": 349816,
+      "wall_ns": 350568
+    },
+    {
+      "index": 28,
+      "op": "table",
+      "cpu_ns": 5604578,
+      "wall_ns": 5616729
+    },
+    {
+      "index": 29,
+      "op": "build",
+      "cpu_ns": 355062,
+      "wall_ns": 355790
+    },
+    {
+      "index": 29,
+      "op": "table",
+      "cpu_ns": 5535686,
+      "wall_ns": 5547356
+    },
+    {
+      "index": 29,
+      "op": "q",
+      "cpu_ns": 5835817,
+      "wall_ns": 5848360
+    },
+    {
+      "index": 30,
+      "op": "table",
+      "cpu_ns": 5670157,
+      "wall_ns": 5682268
+    },
+    {
+      "index": 30,
+      "op": "build",
+      "cpu_ns": 373792,
+      "wall_ns": 374607
+    },
+    {
+      "index": 30,
+      "op": "q",
+      "cpu_ns": 6019347,
+      "wall_ns": 6031948
+    },
+    {
+      "index": 31,
+      "op": "q",
+      "cpu_ns": 5939928,
+      "wall_ns": 5954766
+    },
+    {
+      "index": 31,
+      "op": "build",
+      "cpu_ns": 377181,
+      "wall_ns": 377988
+    },
+    {
+      "index": 31,
+      "op": "table",
+      "cpu_ns": 5547064,
+      "wall_ns": 5558645
+    },
+    {
+      "index": 32,
+      "op": "table",
+      "cpu_ns": 5559441,
+      "wall_ns": 5571827
+    },
+    {
+      "index": 32,
+      "op": "build",
+      "cpu_ns": 374214,
+      "wall_ns": 375061
+    },
+    {
+      "index": 32,
+      "op": "q",
+      "cpu_ns": 6361805,
+      "wall_ns": 6377568
+    },
+    {
+      "index": 33,
+      "op": "table",
+      "cpu_ns": 6446647,
+      "wall_ns": 6461071
+    },
+    {
+      "index": 33,
+      "op": "q",
+      "cpu_ns": 6092136,
+      "wall_ns": 6104997
+    },
+    {
+      "index": 33,
+      "op": "build",
+      "cpu_ns": 360117,
+      "wall_ns": 360890
+    },
+    {
+      "index": 34,
+      "op": "q",
+      "cpu_ns": 6226300,
+      "wall_ns": 6240237
+    },
+    {
+      "index": 34,
+      "op": "table",
+      "cpu_ns": 6089412,
+      "wall_ns": 6102939
+    },
+    {
+      "index": 34,
+      "op": "build",
+      "cpu_ns": 376868,
+      "wall_ns": 377633
+    },
+    {
+      "index": 35,
+      "op": "q",
+      "cpu_ns": 6134170,
+      "wall_ns": 6147455
+    },
+    {
+      "index": 35,
+      "op": "build",
+      "cpu_ns": 373896,
+      "wall_ns": 374735
+    },
+    {
+      "index": 35,
+      "op": "table",
+      "cpu_ns": 5578135,
+      "wall_ns": 5589902
+    },
+    {
+      "index": 36,
+      "op": "build",
+      "cpu_ns": 355513,
+      "wall_ns": 356290
+    },
+    {
+      "index": 36,
+      "op": "q",
+      "cpu_ns": 6019886,
+      "wall_ns": 6034995
+    },
+    {
+      "index": 36,
+      "op": "table",
+      "cpu_ns": 5830023,
+      "wall_ns": 5842979
+    },
+    {
+      "index": 37,
+      "op": "build",
+      "cpu_ns": 380988,
+      "wall_ns": 381755
+    },
+    {
+      "index": 37,
+      "op": "q",
+      "cpu_ns": 6345275,
+      "wall_ns": 6360299
+    },
+    {
+      "index": 37,
+      "op": "table",
+      "cpu_ns": 5802170,
+      "wall_ns": 5815069
+    },
+    {
+      "index": 38,
+      "op": "q",
+      "cpu_ns": 5844865,
+      "wall_ns": 5856897
+    },
+    {
+      "index": 38,
+      "op": "build",
+      "cpu_ns": 376610,
+      "wall_ns": 377451
+    },
+    {
+      "index": 38,
+      "op": "table",
+      "cpu_ns": 6017268,
+      "wall_ns": 6032105
+    },
+    {
+      "index": 39,
+      "op": "build",
+      "cpu_ns": 360000,
+      "wall_ns": 360751
+    },
+    {
+      "index": 39,
+      "op": "table",
+      "cpu_ns": 5648498,
+      "wall_ns": 5661013
+    },
+    {
+      "index": 39,
+      "op": "q",
+      "cpu_ns": 5882278,
+      "wall_ns": 5894512
+    },
+    {
+      "index": 40,
+      "op": "table",
+      "cpu_ns": 5897852,
+      "wall_ns": 5911324
+    },
+    {
+      "index": 40,
+      "op": "build",
+      "cpu_ns": 378444,
+      "wall_ns": 379315
+    },
+    {
+      "index": 40,
+      "op": "q",
+      "cpu_ns": 6233162,
+      "wall_ns": 6247692
+    },
+    {
+      "index": 41,
+      "op": "table",
+      "cpu_ns": 5901786,
+      "wall_ns": 5915726
+    },
+    {
+      "index": 41,
+      "op": "build",
+      "cpu_ns": 405649,
+      "wall_ns": 406496
+    },
+    {
+      "index": 41,
+      "op": "q",
+      "cpu_ns": 6983943,
+      "wall_ns": 6999812
+    },
+    {
+      "index": 42,
+      "op": "q",
+      "cpu_ns": 6213740,
+      "wall_ns": 6227529
+    },
+    {
+      "index": 42,
+      "op": "build",
+      "cpu_ns": 388163,
+      "wall_ns": 388943
+    },
+    {
+      "index": 42,
+      "op": "table",
+      "cpu_ns": 5665811,
+      "wall_ns": 5677837
+    },
+    {
+      "index": 43,
+      "op": "table",
+      "cpu_ns": 5516241,
+      "wall_ns": 5528932
+    },
+    {
+      "index": 43,
+      "op": "build",
+      "cpu_ns": 387112,
+      "wall_ns": 387887
+    },
+    {
+      "index": 43,
+      "op": "q",
+      "cpu_ns": 6085714,
+      "wall_ns": 6099124
+    },
+    {
+      "index": 44,
+      "op": "table",
+      "cpu_ns": 5525726,
+      "wall_ns": 5537188
+    },
+    {
+      "index": 44,
+      "op": "q",
+      "cpu_ns": 5903715,
+      "wall_ns": 5916849
+    },
+    {
+      "index": 44,
+      "op": "build",
+      "cpu_ns": 411760,
+      "wall_ns": 412737
+    },
+    {
+      "index": 45,
+      "op": "build",
+      "cpu_ns": 377017,
+      "wall_ns": 377742
+    },
+    {
+      "index": 45,
+      "op": "table",
+      "cpu_ns": 5746653,
+      "wall_ns": 5759443
+    },
+    {
+      "index": 45,
+      "op": "q",
+      "cpu_ns": 5884584,
+      "wall_ns": 5897971
+    },
+    {
+      "index": 46,
+      "op": "q",
+      "cpu_ns": 6696963,
+      "wall_ns": 6712740
+    },
+    {
+      "index": 46,
+      "op": "build",
+      "cpu_ns": 417089,
+      "wall_ns": 418019
+    },
+    {
+      "index": 46,
+      "op": "table",
+      "cpu_ns": 5765024,
+      "wall_ns": 5777087
+    },
+    {
+      "index": 47,
+      "op": "q",
+      "cpu_ns": 6207735,
+      "wall_ns": 6235165
+    },
+    {
+      "index": 47,
+      "op": "table",
+      "cpu_ns": 5831326,
+      "wall_ns": 5844285
+    },
+    {
+      "index": 47,
+      "op": "build",
+      "cpu_ns": 361084,
+      "wall_ns": 361829
+    }
+  ],
+  "public": "04248e8b585affd039dfd5b15b85eb9992f047c24005df08e19d354418e23d9284b03e5b2abbc1174c918852967ae56c06cd5b20594ef8dcdaff54a65266741804af01a2674dcb777965fdc8211aafbd53d47660bd708a443433da8d1e8f944dc86d5531cbfe5cc62483c8d5016e96220df30a7d83e2512ffb03171005bdcaee45",
+  "probe": [
+    "928045a32785ce2e6ed5b2c027c6f09920981a517b78185a59eb8024bf5328800000000000000001",
+    "56332d53435245454e928045a32785ce2e6ed5b2c027c6f09920981a517b78185a59eb8024bf53288000000000000000010000000000000000f0570baab51eaa8c62ddf569ede12c79d3ab0e9df2e27dbc18b95e4ffe5e0af2ec545714cd73b99e03320c93c4c8936de04f255572a816d9cb7ebfc4bc4b2f6e03626b3d36615f6e0cb994ae060aafa47a37b8005882ac5e22d401189ad30442f75e7a260ba51901bfb3a7191705f48dc2b5ee35bd2df34a79b6deeae359d8fe7570103a5fb1ef678fd08ef66e3b24134593cd886a54b73388f56e1fc05129204650629834a74a5e8ca27fd8ab1c87d84c2e5f63cfe337c7a5773df17c565e50cbcaa49632ebc237",
+    "9a770399e21131f4150005c496dea1c63dfc1e68bb59c95eb55798095d8b7073049c975995f8a283bbcb49410b6fc2dc760ce57595ed67bdfd16ac6026da9c9eeb1b27114549857a5146d0001a78e4aa7627f962a74b4d47ee6438662c861049aa"
+  ]
+}

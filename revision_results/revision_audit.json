@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "tests": {
+    "contiguous_Immediate": true,
+    "contiguous_Second-hit": true,
+    "contiguous_Third-hit": true,
+    "frequency_rejects_one_off": true,
+    "lru2_retains_twice_used": true,
+    "queue_scalar_matches": true,
+    "exact_archive_policy_equivalence": true,
+    "all_primary_cost_identities": true,
+    "qonly_saving_zero": true
+  },
+  "primary_runs": 16200,
+  "robustness_runs": 4320,
+  "joint_sensitivity_runs": 64800,
+  "window_runs": 960,
+  "optimistic_bound_evaluations": 180,
+  "new_identity_traces": 60,
+  "empirical_service_draw_records": 120,
+  "old_policy_equivalence_checks": 2160,
+  "wall_seconds": 43.393994199999725,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_sha256": {
+    "revision_policies.py": "c3ba8f174edf88e24e1cef9d45606106fe2cfe6b68e0673903fa8470c46c171b",
+    "run_revision_experiments.py": "3b295bf76a16dcc3ba0d06a05e76ef385720629a9885bc26ea7a29aba2463206",
+    "measure_revision.py": "a2e424f9a838093de4cb83e48ef1c0dac270cab80941f29c90b10e4e51996717"
+  }
+}

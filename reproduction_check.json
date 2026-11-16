@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "method": "execute published reproduce.py and compare all result CSVs plus figure-source JSON SHA-256",
+  "deterministic_outputs": {
+    "revision_results\\dynamic_paired_comparisons.csv": true,
+    "revision_results\\frequency_window_runs.csv": true,
+    "revision_results\\frequency_window_summary.csv": true,
+    "revision_results\\joint_sensitivity_runs.csv": true,
+    "revision_results\\joint_sensitivity_summary.csv": true,
+    "revision_results\\optimistic_cost_bound.csv": true,
+    "revision_results\\paired_baseline_comparisons.csv": true,
+    "revision_results\\primary_runs.csv": true,
+    "revision_results\\primary_summary.csv": true,
+    "revision_results\\robustness_runs.csv": true,
+    "revision_results\\robustness_summary.csv": true,
+    "round2_results\\dependent_service_paired.csv": true,
+    "round2_results\\dependent_service_runs.csv": true,
+    "round2_results\\dependent_service_summary.csv": true,
+    "round2_results\\draw_correlations.csv": true,
+    "round2_results\\overhead_by_workload.csv": true,
+    "round2_results\\overhead_process_values.csv": true,
+    "round2_results\\workload_overhead_paired.csv": true,
+    "round2_results\\workload_overhead_runs.csv": true,
+    "round2_results\\workload_overhead_summary.csv": true,
+    "revision_figure_source_data.json": true
+  },
+  "inputs_verified": 200,
+  "measurement_backend_smoke": "passed: separate process, 128 valid verifications and 2 altered-message rejections; excluded from calibration"
+}
