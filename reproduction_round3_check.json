@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "output": "Fresh isolated local reproduction directory (machine-specific path omitted)",
+  "csv_checks": {
+    "conditional_uncertainty_reference.csv": "Byte-identical",
+    "deadline_runs.csv": "Byte-identical",
+    "deadline_summary.csv": "Byte-identical",
+    "hotset_scan_paired.csv": "Byte-identical",
+    "hotset_scan_runs.csv": "Byte-identical",
+    "hotset_scan_summary.csv": "Byte-identical",
+    "joint_uncertainty_summary.csv": "Byte-identical",
+    "measured_point_gaps.csv": "Byte-identical",
+    "metadata_memory_runs.csv": "All identities/counts match; allocator bytes are fresh observations.",
+    "metadata_memory_summary.csv": "All identities/counts match; allocator bytes are fresh observations.",
+    "near_tie_summary.csv": "Byte-identical",
+    "offline_selection_summary.csv": "Byte-identical",
+    "offline_selection_test.csv": "Byte-identical",
+    "offline_selection_training.csv": "Byte-identical"
+  },
+  "plots_regenerated": true,
+  "scope": "R3 extension from retained baseline; original timing measurements not rerun"
+}

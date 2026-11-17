@@ -1,0 +1,7 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "definition": "tracemalloc incremental allocations after input IDs exist, including Policy containers, retained metadata and transient Python work; no native acceleration-table allocation or complete process RSS",
+  "peak": "Observed at every policy step; tracemalloc peak is allocator-tracked peak, not a sum of object sizes",
+  "implementation_note": "The retained Immediate reference also fills the shared threshold-counter dictionary. This is an implementation cost, not a necessary property of immediate admission."
+}

@@ -1,0 +1,23 @@
+{
+  "vector_queue_matches_independent_FCFS": true,
+  "all_450_original_100ms_values_exact": true,
+  "540_frozen_heldout_decisions_and_nonnegative_regret": true,
+  "12_archived_measurement_inputs_unchanged": true,
+  "joint_vector_resampling_and_six_independent_draw_rechecks": true,
+  "memory_all_event_table_capacity": true,
+  "observed_counts": {
+    "sensitivity_queue_evaluations": 2430,
+    "deadline_queue_paths": 450,
+    "deadline_threshold_readouts": 1800,
+    "heldout_cost_decisions": 540,
+    "heldout_candidate_cost_evaluations": 3240,
+    "joint_bootstrap_replicates_per_arrival_mode": 10000,
+    "metadata_traces": 1080
+  },
+  "test_selection_summary": {
+    "exact_best_count": 525,
+    "within_0_01pp_count": 540,
+    "max_regret_pct": 0.006997189759436608,
+    "mean_regret_pct": 5.998853906338226e-05
+  }
+}

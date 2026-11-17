@@ -1,0 +1,13 @@
+family,k,tolerance_pp,grid_fraction,grid_points,interpretation
+mixed_scan,2,0.001,0.0028922289128064105,21091,Declared descriptive tolerance; not statistical equivalence
+mixed_scan,2,0.01,0.015551657104926273,21091,Declared descriptive tolerance; not statistical equivalence
+mixed_scan,2,0.1,0.10350386420748187,21091,Declared descriptive tolerance; not statistical equivalence
+mixed_scan,8,0.001,0.18643023090417712,21091,Declared descriptive tolerance; not statistical equivalence
+mixed_scan,8,0.01,0.9937888198757764,21091,Declared descriptive tolerance; not statistical equivalence
+mixed_scan,8,0.1,1.0,21091,Declared descriptive tolerance; not statistical equivalence
+bursts4,8,0.001,0.0,21091,Declared descriptive tolerance; not statistical equivalence
+bursts4,8,0.01,0.7939405433597269,21091,Declared descriptive tolerance; not statistical equivalence
+bursts4,8,0.1,0.9945948508842635,21091,Declared descriptive tolerance; not statistical equivalence
+pressure64,8,0.001,0.0021336114930539094,21091,Declared descriptive tolerance; not statistical equivalence
+pressure64,8,0.01,0.021383528519273623,21091,Declared descriptive tolerance; not statistical equivalence
+pressure64,8,0.1,0.15409416338722678,21091,Declared descriptive tolerance; not statistical equivalence

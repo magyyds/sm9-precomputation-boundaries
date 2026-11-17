@@ -1,0 +1,129 @@
+{
+  "scope": "Single-host calibration-driven single-server FCFS sensitivity; no cluster experiment",
+  "N": 4096,
+  "train_seeds": [
+    271101,
+    271102,
+    271103,
+    271104,
+    271105,
+    271106,
+    271107,
+    271108,
+    271109,
+    271110,
+    271111,
+    271112,
+    271113,
+    271114,
+    271115,
+    271116,
+    271117,
+    271118,
+    271119,
+    271120,
+    271121,
+    271122,
+    271123,
+    271124,
+    271125,
+    271126,
+    271127,
+    271128,
+    271129,
+    271130
+  ],
+  "test_seeds": [
+    281101,
+    281102,
+    281103,
+    281104,
+    281105,
+    281106,
+    281107,
+    281108,
+    281109,
+    281110,
+    281111,
+    281112,
+    281113,
+    281114,
+    281115,
+    281116,
+    281117,
+    281118,
+    281119,
+    281120,
+    281121,
+    281122,
+    281123,
+    281124,
+    281125,
+    281126,
+    281127,
+    281128,
+    281129,
+    281130
+  ],
+  "hot_counts": [
+    4,
+    8,
+    16
+  ],
+  "scan_fractions": [
+    0.1,
+    0.2,
+    0.4
+  ],
+  "sensitivity_methods": [
+    "Q-only",
+    "Second-hit",
+    "Window-Frequency"
+  ],
+  "sensitivity_loads": [
+    0.9,
+    0.95,
+    1.0
+  ],
+  "K": 8,
+  "deadlines_ms": [
+    50,
+    100,
+    200,
+    500
+  ],
+  "primary_loads": [
+    0.5,
+    0.8,
+    0.95,
+    1.0,
+    1.05
+  ],
+  "bootstrap_draws": 10000,
+  "joint_bootstrap_seed": 811703,
+  "arrival_modes": {
+    "fixed_lambda": "Original absolute arrivals held fixed at q_mean/0.95; sampled q changes realized load",
+    "fixed_rho": "Arrivals rescaled with sampled q/0.95 to hold reference load fixed"
+  },
+  "process_resampling": "Sample whole process parameter vectors jointly, preserving q/table/build/p associations; then independently sample trace seed blocks",
+  "near_tie_tolerances_pp": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "source_sha256": "497361411bdd1441ff7cd2398d91f87a0059c2249daddf45edcad584b7ad3ab4",
+  "input_process_sha256": {
+    "process_00.json": "8f640ad9352ce4f32f91bd87b12442dc590e0bece011d7d3709ee7e24045a06d",
+    "process_01.json": "d774b841d322d004e9c3869ed64e754ab58f90e1eca810aac124086fef9efafb",
+    "process_02.json": "20fe8677ab1c9e8a5a3e052f75e0f8da52b93e11e5c9967b04a72d520f12d56e",
+    "process_03.json": "dc7252a76024ad26872f2871d2cd73d3d9cb95f4eb143a9cc9d4ccb63aa571d4",
+    "process_04.json": "28b731c54085c1f390f14f9b8b54c51e229fafde2330f67ed85caf884efb37bf",
+    "process_05.json": "d016e8eb0aa7a09a8b0d0d9cc51106ab93fdecb0e354b13b3dfd13f3bea85fde",
+    "process_06.json": "2055c1d68336eed1a019735758d3e530f41d4f28d3106ec812780286102cc955",
+    "process_07.json": "f3bc936e7a2768ae163a9eb6497a461915530f704d33632759a5b92bc91f373f",
+    "process_08.json": "cb6f92ba26a7ca2f990ecbbb8b58bf5719fb33721fa23a033b6f4368fbd6ea0f",
+    "process_09.json": "dc941256f64c840f2ff6311a2f7626341a5d7713292d90bf661dea35a2746ca6",
+    "process_10.json": "f49ca821899004a6c984a9fa371dcfc09e8cbb05a739e9501c4eb17839ff39a2",
+    "process_11.json": "361ac9acfab348fc98d8a0ed7b841fee7f1134778a8d9768d8c35669449a6780"
+  }
+}

@@ -1,83 +1,45 @@
 # SM9 precomputation admission and queueing boundaries
 
-Reproduction material for **Admission and Queueing Boundaries for SM9 Verification Precomputation**. Version **v2.0.0** includes the workload-specific overhead and dependence-preserving service checks from the second internal review.
+Version **v3.0.0** archives the numerical evidence and code for *Admission and Queueing Boundaries for SM9 Verification Precomputation*. It includes the earlier calibration and R2 results plus the single-host R3 extension: hot-set/scan sensitivity, deadline curves, held-out offline policy selection, near-tie cost maps, joint calibration/trace bootstrap and Python metadata allocation.
 
-The study evaluates when an optional SM9 verification table repays its construction and management cost after common identity-point reuse is already available. It combines software calibration on one host with controlled identity/arrival traces and a single-server queue. Threshold admission is used as an interpretable reference control, not presented as a new caching algorithm.
+This is a calibration-driven single-server simulation study. No six-machine cluster is required. Each calibration process ran on the same host; simulation seeds and bootstrap replicates are not additional hardware experiments.
 
-## Reproduce the results and figures
+## Reproduce
 
-Use **Python 3.12** (tested with 3.12.14), separately from the optional measurement environment below:
+Use Python 3.12 (tested with 3.12.14), NumPy 2.3.5 and Matplotlib 3.11.2:
 
 ```sh
-python -m venv .venv
-# Linux/macOS: source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
+git clone --branch v3.0.0 https://github.com/magyyds/sm9-precomputation-boundaries.git
+cd sm9-precomputation-boundaries
 python -m pip install -r requirements-reproduction.txt
-python reproduce.py
+python verify_publication.py
+python reproduce_round3.py
 ```
 
-Dependencies are NumPy 2.3.5 and Matplotlib 3.11.2. This route uses the retained raw timing records; it requires neither WSL, a compiler, Word, physical vehicles nor new cryptographic measurements. It verifies retained input hashes, computes the results, and exports four main and three supplementary figures to PNG (600 dpi), PDF and SVG. On the original host the numerical/plotting pipeline takes about one minute; duration depends on hardware. Run in a working copy because output files are regenerated.
+Alternatively download and extract the versioned source ZIP or release asset. Installing Python/dependencies may require network access; after installation, simulation and plotting use the included inputs offline. Windows users may run `START_LOCAL.ps1`.
 
-`python verify_publication.py` checks the committed file manifest before reproduction. PDF/SVG metadata and audit wall time can differ after a rerun; deterministic CSV records and figure-source values are compared in `reproduction_check.json`.
+`reproduce_round3.py` verifies its input hashes, writes to a new directory, recomputes the R3 extension, checks the queues and held-out decisions, redraws the three new figures and compares deterministic CSVs/plotting values against this archive. The reference full reproduction passed; `reproduction_round3_check.json` records the comparisons. Python allocation byte peaks are new allocator observations; event counts are checked exactly. `--no-plots` skips rendering while retaining the archived plotting values. Do not change seeds or calibration and expect the same reference hashes.
 
-## Two environments
+`reproduce.py` reruns the baseline/R2 numerical analyses and the seven earlier figures; [baseline instructions](README_v2.md) describe optional cryptographic remeasurement. Neither default entry point remeasures crypto timings. `python verify_round3.py` checks the retained R3 results without rerunning the full bootstrap.
 
-| Task | Tested environment | Dependencies |
-|---|---|---|
-| Simulations, statistics, figures | Windows 11, Python 3.12.14 | NumPy 2.3.5, Matplotlib 3.11.2 |
-| Optional fresh software timings | Ubuntu 22.04 under WSL2, Python 3.10.12, Linux x86-64 | Python standard library and bundled SM9 shared libraries |
+## Data and figure map
 
-To **remeasure**, use Linux/WSL and a new output directory:
-
-```sh
-python3 remeasure.py --output /path/to/new_measurement_run --processes 12
-```
-
-The output directory must not already exist. New timings depend on the host and do not replace the publication inputs automatically. `measurement_backend/REBUILD.md` describes the optional source build. Original measurements used an Intel Core i7-14650HX, logical CPU 2, and 12 separately launched processes. These are repetitions on one machine, not measurements from 12 machines. The native backend and policy loop were timed separately; this is not an end-to-end roadside deployment benchmark.
-
-## Files and data lineage
-
-| Path | Content |
+| Material | Location |
 |---|---|
-| `revision_measurements/` | All 12 process records, operation-order cycles, CPU/wall timings, policy-loop timings, provenance |
-| `traces/` | 180 original identity/arrival traces, 4,096 messages each |
-| `revision_traces/` | 60 dynamic identity traces and 120 independent empirical-service records |
-| `round2_traces/` | 240 joint-cycle/process-block service records, with sampled process/cycle indices |
-| `revision_results/` | Original revised primary matrix, robustness, joint cost sensitivity, window checks and exact boundaries |
-| `round2_results/` | Workload-specific overhead, recalculated primary matrix, dependence-preserving results and paired contrasts |
-| `revision_experiment_data.json` | Current aggregated run results, summaries, raw process measurements and figure data; external NPZ arrays indexed by relative path and SHA-256 |
-| `revision_figure_source_data.json` | Numerical inputs to all seven figures, including Figure 1's boundary grid and mathematical definition |
-| `revision_figures/` | Four main and three supplementary figures |
-| `frozen_config.json`, `calibration/` | Earlier four-policy configuration/calibration retained for code-equivalence checks; these are **not** the primary revised cost parameters |
-| `revision_results/revision_config.json` | Primary revised measured costs and six-policy configuration |
-| `round2_results/round2_config.json` | Second-review sensitivity definitions |
-| `input_manifest.json` | Fixed-input hashes checked by `reproduce.py` |
-| `publication_manifest.json` | File hashes for this repository snapshot |
+| Original calibration and process provenance | `revision_measurements/`, `calibration/`, `measurement_backend/` |
+| Baseline and R2 run-level results | `revision_results/`, `round2_results/` |
+| R3 run-level records, summaries, configuration and verification | `round3_results/` |
+| Identity, arrival, empirical service and bootstrap arrays | `traces/`, `revision_traces/`, `round2_traces/`, `round3_traces/` |
+| Current combined numerical export | `round3_experiment_data.json` |
+| Plotting source values | `revision_figure_source_data.json`, `round3_figure_source_data.json` |
+| Five main and five supplementary figure exports | `revision_figures/` (600 dpi PNG, PDF, SVG) |
+| Plotting scripts | `plot_revision_figures.py`, `plot_round3_figures.py` |
+| Input and full archive hashes | `input_manifest.json`, `round3_input_manifest.json`, `publication_manifest.json` |
 
-The JSON is the current manuscript's numerical export, not every historical project experiment. Keep the indexed NPZ files for trace-level reconstruction. Figures are generated by Python directly from the results; numerical marks are not generated by an image model.
+The current JSON contains the run/summary tables, the 12 raw calibration records and all ten manuscript figures' source values. It indexes **1,206 external NPZ files** by relative path, byte size and SHA-256. JSON alone supports plotting of the stored numerical results; exact experiment replay also requires the external arrays. `revision_experiment_data.json` is the preserved baseline/R2 snapshot.
 
-## Experimental definitions
+R3 counts: 2,430 hot-set/scan queue evaluations; 450 deadline queue paths with 1,800 threshold readouts; 540 held-out trace–capacity decisions from 30 held-out seed blocks (3,240 candidate costs); two arrival conventions with 10,000 joint bootstrap replicates each; four near-tie cost grids; 1,080 Python metadata traces. Units, seeds, cost normalization and arrival conventions are recorded in the configuration and CSV headers. A 0.01-percentage-point near-best tolerance is descriptive, not a statistical equivalence test.
 
-- Methods: Q-only, Immediate/LRU, Second-hit, Third-hit, LRU-2 and Window-Frequency. Window-Frequency is an exact-window reference, not a TinyLFU sketch or W-TinyLFU implementation.
-- K counts resident optional acceleration tables. Identity points and candidate/history metadata are outside this budget; the comparison does not equalise total process bytes.
-- Service work is `T = Nq + N_B B - N_H delta + Np`. Figure 1 minimises mean work among the six specified policies. This is not a deadline-optimal policy map. Exact ties follow the declared method order.
-- Main policy charges are equal-family means, one value per method. `round2_results/overhead_by_workload.csv` resolves all six workloads; its columns explicitly distinguish milliseconds and microseconds (`1 us = 0.001 ms`). The whole primary matrix is also recalculated using workload-specific charges.
-- The independent service model draws q, table and build times separately. Joint-cycle sampling retains the triple from one process and one serial measurement cycle. The process-block stress model holds a process for 128 messages and resamples cyclic 64-cycle sequences. The block length is a declared sensitivity choice, not a measured hardware-state duration.
-- Software timings repeat one generated identity/message/signature within each process, with fresh material between processes. Timing dependence does not represent simultaneous counterfactual verification calls or a measured vehicular workload.
-- Simulation replication is **30 paired seeds**, with 10,000 percentile bootstrap resamples (seed 811610). Calibration uses **12 process means** (seed 811611). Conditional simulation intervals do not propagate uncertainty across machines. No multiplicity-adjusted superiority or formal equivalence claim is made.
-- The Second-hit/Window-Frequency completion difference in mixed scan is practically small. Lower policy-loop overhead is a separate implementation observation. All scenarios, including those favouring other policies, remain in the results.
-- `metadata_entries_peak` records the largest entry count observed at miss decisions, not a guaranteed all-event memory peak. The optimistic cost bound uses relaxed unlimited storage and zero policy overhead; it is not a feasible K-slot or deadline oracle.
+## Version and citation
 
-## Evaluation inventory
-
-The first revised design has 16,200 primary, 4,320 fixed/empirical robustness, 64,800 joint-cost and 960 frequency-window evaluations: 86,280 total. The second review adds 16,200 workload-specific-overhead settings and 4,320 dependence-preserving settings: **20,520 new evaluations**. Its 2,160 independent-model checks reproduce existing rows exactly and are not counted again as new settings. Parameter cells are not independent experimental units.
-
-## Citation and provenance
-
-Use `CITATION.cff` for the code/data artifact and cite version `v2.0.0` or an immutable commit. No DOI or conference acceptance status is asserted by this repository.
-
-The SM9 backend retains GmSSL commit `24ae482701a7b124826c382fffc55c19f76d475d`, its Apache-2.0 license and source notices under `measurement_backend/vendor/gmssl-src/`. See `measurement_backend/THIRD_PARTY.md` for attribution. The backend is the subset needed for these timings; SUMO/ns-3 and other optional components mentioned in older source documentation are not dependencies of this study. No additional blanket license has been assigned to author-written material.
-
-## 中文快速说明
-
-主仿真使用 Python 3.12，与 Python 3.10/Linux 下的可选软件重测分开。安装 `requirements-reproduction.txt` 后运行 `python reproduce.py`，即可重算统计并生成全部七张图。新版JSON包含当前结果和600个外部NPZ文件的索引。第二轮新增核查保留在 `round2_results/`；原始测量未改写，没有加入实物实验数据。
+Use the **v3.0.0** tag/release for this manuscript version; v2.0.0 remains the earlier snapshot. `CITATION.cff` provides author order, title, version and date. No DOI has been assigned by this repository. The release includes an archive with a SHA-256 checksum; the Git commit identifies the exact tree. Third-party source notices in `measurement_backend/` remain unchanged.
