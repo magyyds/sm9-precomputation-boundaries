@@ -1,10 +1,8 @@
 cff-version: 1.2.0
-message: "Please cite this version of the reproduction material."
+message: "Please cite this study and record the Git commit used for reproduction."
 type: software
 title: "Admission and Queueing Boundaries for SM9 Verification Precomputation"
-version: 3.0.0
-date-released: 2026-11-17
-url: "https://github.com/magyyds/sm9-precomputation-boundaries/releases/tag/v3.0.0"
+url: "https://github.com/magyyds/sm9-precomputation-boundaries"
 repository-code: "https://github.com/magyyds/sm9-precomputation-boundaries"
 authors:
   - family-names: Ma
@@ -19,4 +17,4 @@ authors:
     given-names: Xiaowei
   - family-names: Wang
     given-names: Junyao
-abstract: "Software calibration, paired queueing simulations, workload-specific policy overhead and dependence-preserving timing sensitivity, hot-set and deadline sensitivity, held-out configuration, joint bootstrap and metadata allocation for incremental SM9 precomputation."
+abstract: "Software calibration, paired queueing simulations, workload-specific policy overhead and dependence-preserving timing sensitivity, hot-set and deadline sensitivity, held-out configuration, joint bootstrap metadata allocation, and interior hot-set simulations for incremental SM9 precomputation."

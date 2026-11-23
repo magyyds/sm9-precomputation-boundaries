@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "csv_comparison": "Three tables byte-identical",
+  "npz_array_comparison": "630 files have identical arrays",
+  "new_evaluations": 3240,
+  "anchor_rechecks": 2430,
+  "compact_figure_source_comparison": "Identical numerical source JSON"
+}
